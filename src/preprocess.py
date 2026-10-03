@@ -11,7 +11,7 @@ def normalize(x):
     x = x.astype("float32")
     mins = x.min(axis=(1, 2), keepdims=True)
     maxs = x.max(axis=(1, 2), keepdims=True)
-    return (x - mins) / (maxs - mins)
+    return ((x - mins) / (maxs - mins)).astype("float16")
 
 
 train = np.load("data/raw/train.npz")
