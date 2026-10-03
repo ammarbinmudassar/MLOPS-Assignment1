@@ -8,7 +8,10 @@ params = yaml.safe_load(open("params.yaml"))["preprocess"]
 
 
 def normalize(x):
-    return x.astype("float32") / 255.0
+    x = x.astype("float32")
+    mins = x.min(axis=(1, 2), keepdims=True)
+    maxs = x.max(axis=(1, 2), keepdims=True)
+    return (x - mins) / (maxs - mins)
 
 
 train = np.load("data/raw/train.npz")
