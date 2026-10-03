@@ -1,6 +1,6 @@
 # fashion-ann-pipeline
 
-Classifies Fashion-MNIST images with a simple fully-conected ANN (TensorFlow/Keras).
+Classifies Fashion-MNIST images with a simple fully-connected ANN (TensorFlow/Keras).
 Data and models are versioned with DVC (Google Drive remote) and the whole
 pipeline runs with a single `dvc repro`.
 
