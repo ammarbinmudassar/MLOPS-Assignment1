@@ -33,3 +33,4 @@ model.fit(
 )
 model.save("models/model.h5")
 print("Saved model to models/model.h5")
+# trains the ANN using values from params.yaml
